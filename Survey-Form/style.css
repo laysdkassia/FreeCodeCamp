@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgb(130, 106, 251);
+}
+.container {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.container header {
+    font-size: 1.3rem;
+    color: #333;
+    text-align: center;
+}
+.container #survey-form {
+    margin-top: 30px;
+}
+#survey-form .input-box {
+    width: 100%;
+    margin-top: 20px;
+}
+.input-box label {
+    color: #333;
+}
+#survey-form .input-box input {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    margin-top: 8px;
+    color: #707070;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+#survey-form .column {
+    display: flex;
+    column-gap: 15px;
+}
+#survey-form .recommend-box {
+    margin-top: 20px;
+}
+.recommend-box h3 {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+
+}
+#survey-form :where(.recommend-option, .recommend) {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+}
+#survey-form .recommend {
+    column-gap: 5px;
+    cursor: pointer;
+}
+#survey-form :where(.recommend input, .recommend label) {
+    cursor: pointer;
+}
+
+/* Responsive */
+@media screen and (max-width: 500px) {
+    #survey-form .column {
+        flex-wrap: wrap;
+    }
+    #survey-form :where(.recommend-option, .recommend){
+        row-gap: 15px;
+    }
+}
